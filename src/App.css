@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* *{
+  font-family: "Kurale", serif;
+  
+}  */
+  
+*{
+  /* color: white; */
+  font-family: "Poppins", sans-serif;
+  
+}
+.theme-background{
+   background:linear-gradient(to  right , #003366, #2f5f84,#46769b, #5c8cad,#2f5f84);
+   opacity: 1;
+   color: white;
+}
+
+.footer-background{
+  background-color: #1b5886;
+  background-color: #174978;
+
+}
+.myblur{
+  background-color: #174978;
+  box-shadow: 0 0 20px #fff;
+  transition: all .3s;
+
+}
+
+.myblur:hover , .myblur:active{
+  box-shadow: 0 0 40px #fff;
+}
+
+.form-background{
+  background: linear-gradient(to right, #979696cc ,#C4C4C41A);
+  box-shadow: 0 0 20px  #979696cc ;
+  transition: all 1s;
+}
+
+.form-background:hover , .form-background:active{
+  box-shadow: 0 0 40px  #979696cc;
+}
+
+.inputField{
+  background: linear-gradient(to right, #979696cc ,#C4C4C41A);
+  padding: 10px;
+  color: whitesmoke;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #979696cc ;
+  width: 100%;
+   box-shadow: 0 0 2px  #979696cc;
+   transition: all .3s;
+}
+
+.inputField:focus {
+  box-shadow: 0 0 10px  #979696cc;
+}
+
+.requiredError{
+    color: red;
+    margin: 0;
+    font-size: 12px;
+    padding: 0;
+}
+.ErrorArea{
+    color: transparent;
+    visibility: none;
+    margin: 0;
+    font-size: 12px;
+    padding: 0;
+}
+
+
+.icons{
+  transition:  all .3s;
+}
+
+.icons:hover , .icons:active{
+
+  box-shadow: 0 0 10px #fff;
+  transform: scale(1.1);
+}
+
+
+.myshadow{
+   box-shadow: 0 0 30px #fff;
+}
+
+
+.project{
+   box-shadow: 0 0 10px #174978;
+   transition: all .3s;
+}
+
+.project:hover , .project:active {
+  box-shadow: 0 0 30px #174978;
+  transform: translateY(-10px);
+}
+
+.headings{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+.aboutBackground{
+  background: white;
+}
+
+.offers{
+  color:#35e9ec !important;
+}

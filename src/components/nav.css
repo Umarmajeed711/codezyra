@@ -1,0 +1,44 @@
+
+
+
+.nav-bar{
+    /* background:linear-gradient(to right , #192732,#1a2938, #293f7b);
+    background:linear-gradient(to  right , #5293bb ,#1b5886,#00396b );
+    background:linear-gradient(to  right , #5293bb ,#89cff1 ,#5293bb,#89cff1 ,#5293bb); */
+    /* background-color: #1b5886; */
+    background-color: #174978;
+    background-color: white;
+    box-shadow: -5px 0px 5px #174978;
+    overflow: hidden;
+}
+
+
+
+.link{
+    color:#174978;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background-color: transparent;
+}
+
+
+
+.link:hover , .link:active{
+    /* box-shadow: 0px 0px 100px #174978;  */
+    color: #174978;
+}
+
+.link::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color:#174978;
+    display:block;
+    margin: 1;
+    transition: all .3s;
+}
+
+.link:hover::after , .link:active::after {
+    width: 100%;
+}
