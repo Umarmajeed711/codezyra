@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Hero from "../components/Hero";
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <>
+      <div>
+        <Hero />
+      </div>
+    </>
+  );
+};
 
-export default Contact
+export default Contact;
