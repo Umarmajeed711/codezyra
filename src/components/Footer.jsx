@@ -4,13 +4,14 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { GrGithub } from "react-icons/gr";
 import { FaWhatsapp } from "react-icons/fa6";
+import { Link } from "react-router";
 const Footer = () => {
   return (
     <div className="footer-background ">
       <div className="flex h-full flex-col items-center  mx-4 md:mx-8 lg:mx-10 lg:p-8 p-4 ">
         <div>
           <p className="text-3xl md:text-4xl kurale lg:text-[50px] text-main-color">
-            Saifa shahnawaz
+            Codezyra
           </p>
         </div>
 
@@ -18,20 +19,20 @@ const Footer = () => {
           <div className="my-5 sm:my-10 ">
             <ul className="flex flex-col sm:flex-row sm:gap-5 gap-1 ">
               <li className="link text-sm md:text-xl">
-                <a href="#Home">Home</a>
+                <Link to={"/"}>Home</Link>
               </li>
               <li className="link text-sm md:text-xl">
-                <a href="#About">About me</a>
+                 <Link to={"/About"}>About Us</Link>
               </li>
 
               <li className="link text-sm md:text-xl">
-                <a href="#Skills">Skills</a>
+                <Link to={"/Services"}>Services</Link>
               </li>
               <li className="link text-sm md:text-xl">
-                <a href="#Portfolio">Portfolio</a>
+                <Link to={"/Portfolio"}>Portfolio</Link>
               </li>
               <li className="link text-sm md:text-xl">
-                <a href="#Contact">Contact</a>
+                <Link to={"/Contact"}>Contact</Link>
               </li>
             </ul>
           </div>

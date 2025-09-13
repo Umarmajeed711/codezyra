@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "./nav.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -26,19 +27,20 @@ const Navbar = () => {
 
         <ul className="hidden md:flex space-x-6  font-medium ">
           <li className="link text-xl ">
-            <a href="#Home">Home</a>
+            {/* <a href="#Home">Home</a> */}
+            <Link to={"/"}>Home</Link>
           </li>
           <li className="link text-xl">
-            <a href="#About">About Us</a>
+             <Link to={"/About"}>About Us</Link>
           </li>
           <li className="link text-xl">
-            <a href="#Services">Services</a>
+             <Link to={"/Services"}>Services</Link>
           </li>
           <li className="link text-xl">
-            <a href="#Portfolio">Portfolio</a>
+             <Link to={"/Portfolio"}>Portfolio</Link>
           </li>
           <li className="link text-xl">
-            <a href="#Contact">Contact</a>
+             <Link to={"/Contact"}>Contact</Link>
           </li>
         </ul>
       </div>
@@ -48,19 +50,19 @@ const Navbar = () => {
           {/* sideLinks */}
           <ul className="space-y-3 text-gray-700 font-medium">
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-              <a href="#Home">Home</a>
+               <Link to={"/"}>Home</Link>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-              <a href="#About">About Us</a>
+               <Link to={"/About"}>About Us</Link>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-              <a href="#Services">Services</a>
+               <Link to={"/Services"}>Services</Link>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-              <a href="#Portfolio">Portfolio</a>
+              <Link to={"/Portfolio"}>Portfolio</Link>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-              <a href="#Contact">Contact</a>
+              <Link to={"/Contact"}>Contact</Link>
             </li>
           </ul>
         </nav>
