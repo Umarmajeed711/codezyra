@@ -2,11 +2,6 @@
 
 
 .nav-bar{
-    /* background:linear-gradient(to right , #192732,#1a2938, #293f7b);
-    background:linear-gradient(to  right , #5293bb ,#1b5886,#00396b );
-    background:linear-gradient(to  right , #5293bb ,#89cff1 ,#5293bb,#89cff1 ,#5293bb); */
-    /* background-color: #1b5886; */
-    background-color: #174978;
     background-color: white;
     box-shadow: -5px 0px 5px #174978;
     overflow: hidden;

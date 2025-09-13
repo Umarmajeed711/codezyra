@@ -16,7 +16,7 @@ const Services = () => {
         trigger: "#Services .service1",
         // markers: true,
         scrub: 2,
-        start: "top 30%",
+        start: "top 70%",
         end: "top 50%",
         scroll: -1,
       },
@@ -29,7 +29,7 @@ const Services = () => {
         trigger: "#Services .service2",
         // markers: true,
         scrub: 2,
-        start: "top 30%",
+        start: "top 70%",
         end: "top 50%",
         scroll: -1,
       },
@@ -43,7 +43,7 @@ const Services = () => {
         trigger: "#Services .service3",
         // markers: true,
         scrub: 2,
-        start: "top 30%",
+        start: "top 70%",
         end: "top 50%",
         scroll: -1,
       },
@@ -51,13 +51,13 @@ const Services = () => {
   });
 
   return (
-    <div className="theme-background py-10" id="Services">
+    <div className="theme-background py-5" id="Services">
       <div className="flex h-full flex-col items-center  mx-4 md:mx-8 lg:mx-10 lg:p-8 p-4 ">
         <div className="flex justify-center items-center flex-col mx-10">
-          <p className="text-3xl md:text-4xl  lg:text-[70px] headings border-b-[6px] pb-4">
+          <p className="text-3xl md:text-4xl  lg:text-[70px] headings ">
             Services
           </p>
-          <p className="text-xl text-center">
+          <p className="text-xl text-center py-4">
             At CodeZyar, we provide a wide range of digital solutions to help
             businesses grow, innovate, and succeed.
           </p>
@@ -65,7 +65,7 @@ const Services = () => {
 
 
          <div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-5 md:my-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-5 md:my-10">
             {/* Website development */}
             <div className="flex flex-col justify-between col-span-1  gap-5  pb-10  p-5 rounded-[46px] myblur shadow-3xl service1">
               

@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Link } from "react-router";
 
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -71,7 +72,8 @@ digital world.</p>
 <p className="text-[#174978]">
   CodeZyar was founded with the belief that technology should work for people, not the other way around.
 From the beginning, our goal has been to provide custom-made software solutions that are not only functional but
-also user-friendly and scalable.
+also user-friendly and scalable. 
+<span><Link className="text-[#174978] font-semibold hover:text-[#135898] " to="/About">Read more</Link></span>
 
 </p>
           </div>

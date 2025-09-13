@@ -7,7 +7,6 @@
 }  */
   
 *{
-  /* color: white; */
   font-family: "Poppins", sans-serif;
   
 }
@@ -17,11 +16,7 @@
    color: white;
 }
 
-.footer-background{
-  background-color: #1b5886;
-  background-color: #174978;
 
-}
 .myblur{
   background-color: #174978;
   box-shadow: 0 0 20px #fff;
@@ -34,29 +29,30 @@
 }
 
 .form-background{
-  background: linear-gradient(to right, #979696cc ,#C4C4C41A);
-  box-shadow: 0 0 20px  #979696cc ;
+  background-color: white;
+  color: #174978;
+  box-shadow: 0 0 10px  white ;
   transition: all 1s;
 }
 
 .form-background:hover , .form-background:active{
-  box-shadow: 0 0 40px  #979696cc;
+  box-shadow: 0 0 20px  white;
 }
 
 .inputField{
-  background: linear-gradient(to right, #979696cc ,#C4C4C41A);
+  background:linear-gradient(to  right , #003366, #2f5f84,#46769b, #5c8cad,#2f5f84);
   padding: 10px;
-  color: whitesmoke;
+  color: white;
   outline: none;
   border-radius: 10px;
-  border: 1px solid #979696cc ;
+  border: 1px solid  #2f5f84;
   width: 100%;
-   box-shadow: 0 0 2px  #979696cc;
+   box-shadow: 0 0 2px  #2f5f84;
    transition: all .3s;
 }
 
 .inputField:focus {
-  box-shadow: 0 0 10px  #979696cc;
+  box-shadow: 0 0 10px  white;
 }
 
 .requiredError{
