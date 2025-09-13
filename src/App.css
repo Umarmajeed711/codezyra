@@ -114,3 +114,12 @@
 .offers{
   color:#35e9ec !important;
 }
+
+.loading{
+    border: 5px solid black;
+    height: 40px;
+    width: 40px;
+    border-right: 5px solid #174978 ;
+    border-radius: 50%;
+    animation: load 1s linear infinite;
+}

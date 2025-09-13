@@ -5,7 +5,7 @@ import { ReactTyped } from "react-typed";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const Home = () => {
+const HeroSection = () => {
   const container = useRef();
 
   useGSAP(
@@ -87,4 +87,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default HeroSection;

@@ -1,26 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import NewNav from './components/NewNav';
-import { useState } from 'react';
-import Swal from 'sweetalert2';
+import { useContext, useEffect, useState } from 'react';
+import MyRoutes from './components/MyRoutes';
+import { GlobalContext } from './context/Context';
+import api from './components/api';
 
 const  App = () =>  {
+
+   // data store in a context api
+ let {state , dispatch} = useContext(GlobalContext);
+
+
+
+const checkLogin = async () => {
+
+  try{
+    let response = await api.get(`/admin_details`)
+    
+    dispatch({ type: "ADMIN_LOGIN", payload: response.data.user });
+    console.log(response);
+  }
+  catch(error){
+      dispatch({type: "USER_LOGOUT"});
+  }
+}
+
+useEffect(() => {
+  // checkLogin()
+},[])
+
 
   return (
    <div >
       <Navbar/>
-      <Home/>
-      <About/>
-      <Services/>
-      <Portfolio/>
-      <Contact/>
+      <MyRoutes/>
       <Footer/>
     </div>
 
