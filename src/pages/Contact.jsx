@@ -1,4 +1,5 @@
 
+import ContactSection from "../sections/ContactSection";
 import HeroSection from "../sections/HeroSection";
 
 const Contact = () => {
@@ -11,9 +12,10 @@ const Contact = () => {
    };
   return (
     <>
-      <div>
+      <main>
         <HeroSection data={contactData} />
-      </div>
+        <ContactSection />
+      </main>
     </>
   );
 };
