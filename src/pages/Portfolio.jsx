@@ -1,10 +1,8 @@
-import React from "react";
-
-import "./Portfolio.css";
-import Hero from "../components/Hero";
+import HeroSection from "../sections/HeroSection";
+import CardSection from "../sections/CardSection";
 
 const Portfolio = () => {
-  const contactData = {
+  const portfolioData = {
     title: "Build the Future with Us",
     description:
       "We’re a team of builders, thinkers, and explorers using AI, machine learning, and blockchain to solve meaningful problems.",
@@ -12,9 +10,12 @@ const Portfolio = () => {
     img: "./portfolio_banner.png",
   };
   return (
-    <div>
-      <Hero data={contactData} />
-    </div>
+    <main>
+      {/* hero section */}
+      <HeroSection data={portfolioData} />
+      <CardSection />
+     
+    </main>
   );
 };
 

@@ -1,5 +1,5 @@
-import React from "react";
-import Hero from "../components/Hero";
+
+import HeroSection from "../sections/HeroSection";
 
 const Contact = () => {
    const contactData = {
@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <>
       <div>
-        <Hero data={contactData} />
+        <HeroSection data={contactData} />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./nav.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
       {/* nav-links */}
       <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center ">
         <div className="text-3xl md:text-4xl  lg:text-[50px]  logo">
-         Codezyra
+          Codezyra
         </div>
 
         <div className="md:hidden">
@@ -28,19 +28,54 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6  font-medium ">
           <li className="link text-xl ">
             {/* <a href="#Home">Home</a> */}
-            <Link to={"/"}>Home</Link>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `${isActive ? "text-orange-400" : ""}`
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li className="link text-xl">
-             <Link to={"/About"}>About Us</Link>
+            <NavLink
+              to={"/About"}
+              className={({ isActive }) =>
+                `${isActive ? "text-orange-400" : ""}`
+              }
+            >
+              About Us
+            </NavLink>
           </li>
           <li className="link text-xl">
-             <Link to={"/Services"}>Services</Link>
+            <NavLink
+              to={"/Services"}
+              className={({ isActive }) =>
+                `${isActive ? "text-orange-400" : ""}`
+              }
+            >
+              Services
+            </NavLink>
           </li>
           <li className="link text-xl">
-             <Link to={"/Portfolio"}>Portfolio</Link>
+            <NavLink
+              to={"/Portfolio"}
+              className={({ isActive }) =>
+                `${isActive ? "text-orange-400" : ""}`
+              }
+            >
+              Portfolio
+            </NavLink>
           </li>
           <li className="link text-xl">
-             <Link to={"/Contact"}>Contact</Link>
+            <NavLink
+              to={"/Contact"}
+              className={({ isActive }) =>
+                `${isActive ? "text-orange-400" : ""}`
+              }
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -50,19 +85,19 @@ const Navbar = () => {
           {/* sideLinks */}
           <ul className="space-y-3 text-gray-700 font-medium">
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-               <Link to={"/"}>Home</Link>
+              <NavLink to={"/"}>Home</NavLink>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-               <Link to={"/About"}>About Us</Link>
+              <NavLink to={"/About"}>About Us</NavLink>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-               <Link to={"/Services"}>Services</Link>
+              <NavLink to={"/Services"}>Services</NavLink>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-              <Link to={"/Portfolio"}>Portfolio</Link>
+              <NavLink to={"/Portfolio"}>Portfolio</NavLink>
             </li>
             <li className="link text-sm sm:text-xl" onClick={showSideBar}>
-              <Link to={"/Contact"}>Contact</Link>
+              <NavLink to={"/Contact"}>Contact</NavLink>
             </li>
           </ul>
         </nav>
