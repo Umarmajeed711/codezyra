@@ -15,9 +15,12 @@ const Navbar = () => {
     <nav className=" bg-white shadow-md fixed  z-50 nav-bar w-full">
       {/* nav-links */}
       <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center ">
-        <div className="text-3xl md:text-4xl  lg:text-[50px]  logo">
+        <div className="text-3xl md:text-4xl  lg:text-[50px]  logo text-[#174978]">
          Codezyra
         </div>
+        {/* <div>
+        <img src="./codezyra.png" className="h-20 w-40" />
+        </div> */}
 
         <div className="md:hidden">
           <button onClick={showSideBar}>

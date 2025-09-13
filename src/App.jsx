@@ -16,7 +16,7 @@ const  App = () =>  {
 const checkLogin = async () => {
 
   try{
-    let response = await api.get(`/admin_details`)
+    let response = await api.get(`/auth/admin-detail`)
     
     dispatch({ type: "ADMIN_LOGIN", payload: response.data.user });
     console.log(response);

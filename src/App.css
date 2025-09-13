@@ -16,6 +16,10 @@
    color: white;
 }
 
+.pageHeight{
+  height: calc(100vh + 80px);
+}
+
 
 .myblur{
   background-color: #174978;

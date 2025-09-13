@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PiBracketsCurlyBold } from "react-icons/pi";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import api from "./api";
 
 const Services = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -49,6 +50,32 @@ const Services = () => {
       },
     });
   });
+
+
+  const [ServicesArray,setServicesArray] = useState([]);
+  
+    const getServices = async () => {
+  
+      try {
+        
+        let response = await api.get("/Service");
+  
+        console.log(response);
+        
+      } catch (error) {
+        console.log(error);
+        
+        
+      }
+  
+    }
+  
+  
+    useEffect( () => {
+  
+  
+  
+    },[])
 
   return (
     <div className="theme-background py-5" id="Services">
