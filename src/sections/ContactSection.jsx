@@ -3,8 +3,11 @@ import Input from "../components/Input";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { LuPhone } from "react-icons/lu";
+import axios from "axios";
+import Loader from "../components/Loader";
 
 const ContactSection = () => {
+  const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
   const [form, setForm] = useState({
     firstName: "",
@@ -43,21 +46,38 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+    setError("");
     try {
-      if (!validateForm()) return;
+      setLoader(true);
       console.log("form data", form);
-      alert("submit called");
-    } catch (error) {}
+      const res = await axios.post(
+        "http://localhos:6392/api/v1/contact-us",
+        form
+      );
+    } catch (error) {
+      
+      console.log(error);
+    } finally {
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+      });
+      setLoader(false);
+    }
   };
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-r from-[#3A6e86] via-[#3A6d8E] to-[#3A6A8a]">
+    <section className="min-h-screen flex items-center bg-gradient-to-r from-[#0074b7] via-[#11487c] to-[#0074b7]">
       <div className="flex-1 h-full mx-4 md:mx-8 lg:mx-10  p-6 flex flex-col md:flex-row justify-center items-center gap-4 ">
         <div className="flex-1 rounded-2xl shadow-lg bg-[#2B5B81] self-stretch">
           <form onSubmit={handleSubmit} className="p-6">
             <div className="flex flex-col gap-2 ">
-              <h2 className="text-center text-3xl text-white bold">
+              <h2 className="text-center text-3xl text-white font-semibold">
                 Send us a message
               </h2>
+
               <small
                 className={`border border-red-500 text-red-400 px-4 text-[14px] ${
                   error ? "visible" : "invisible"
@@ -101,11 +121,13 @@ const ContactSection = () => {
                 ></textarea>
               </div>
             </div>
-            <input
-              className="w-full py-2 bg-blue-500 text-white hover:bg-blue-600 rounded-lg "
+            <button
+              className="w-full py-2 bg-blue-500 flex justify-center text-white hover:bg-blue-600 rounded-lg "
               type="submit"
-              value="Contact us"
-            />
+            >
+              {" "}
+              {loader ? <Loader /> : "Contact us"}
+            </button>
           </form>
         </div>
         <div className="flex-1 self-stretch flex flex-col gap-4 ">
