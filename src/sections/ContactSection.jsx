@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Input from "../components/Input";
-import ContactForm from "../components/ContactForm";
-import Button from "../components/Button";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { LuPhone } from "react-icons/lu";
@@ -92,7 +90,6 @@ const ContactSection = () => {
                 value={form.email}
                 onChange={changeHandler}
               />
-              {/* <ContactForm /> */}
               <div>
                 <textarea
                   className="w-full h-40 px-4 py-2 rounded"
@@ -114,12 +111,12 @@ const ContactSection = () => {
         <div className="flex-1 self-stretch flex flex-col gap-4 ">
           <div className="flex-1 bg-[#2B5B81] rounded-2xl overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.300923515065!2d67.08220067509423!3d24.86146284656706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f7cba5bbf57%3A0x4a76a82e2d32c7!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1691234567890"
+              title="Codezyra - Gol Market Paposh Karachi"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28959.64198797762!2d67.0256695!3d24.9171295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fd7f3d0ed2f%3A0xf9f88e6c0a6f7bb7!2sMehran%20Sweets%2C%20Gole%20Market%20Paposh%2C%20Karachi!5e0!3m2!1sen!2s!4v1694707850000!5m2!1sen!2s"
               className="w-full h-full "
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="map"
             ></iframe>
           </div>
           <div className="flex-2 p   text-start text-[14px] bg-[#2B5B81] rounded-2xl p-4 text-white">
@@ -136,7 +133,7 @@ const ContactSection = () => {
 
             <p className="flex gap-3 items-center pb-3 ">
               <LuPhone />
-              <span>03112070329</span>
+              <span>+923112070329</span>
             </p>
             <p className="flex gap-3 items-center pb-3 ">
               <CiLocationOn />
