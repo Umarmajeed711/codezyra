@@ -30,7 +30,7 @@ const Contact = () => {
 
 
 
-  const [loading,setloading] = useState(false)
+  const [loading, setloading] = useState(false)
 
   const formRef = React.useRef(null); // reference to native HTML form
 
@@ -56,29 +56,29 @@ const Contact = () => {
 
       formRef.current.submit();
 
-       // Simulate form submit (API call, FormSubmit, etc.)
-    setTimeout(() => {
-      setloading(false);
-     const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "success",
-        title: "Thanks for Contact us",
-      });
+      // Simulate form submit (API call, FormSubmit, etc.)
+      setTimeout(() => {
+        setloading(false);
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Thanks for Contact us",
+        });
 
-      contactFormik.resetForm();
-    }, 1000); // Simulated 2-second delay
+        contactFormik.resetForm();
+      }, 1000); // Simulated 2-second delay
 
-      
+
     },
   });
 
@@ -107,19 +107,15 @@ const Contact = () => {
                 <div className="flex items-center gap-4 ">
                   <div>
                     <a
-                      href="https://wa.me/+92000111222?text=Hi%20there%2C%20I%20want%20to%20hire%20you%20for%20a%20project"
+                      href="https://wa.me/+92162402815?text=Hi%20there%2C%20I%20want%20to%20hire%20you%20for%20a%20project"
                       target="_blank"
                     >
                       {/* <FaWhatsapp className="w-10 h-10 icons " /> */}
-                      <img src="./whatsapp.png" className="w-10 h-10 icons "/>
+                      <img src="./whatsapp.png" className="w-10 h-10 icons " />
                     </a>
                   </div>
                   <div>whatsapp</div>
                 </div>
-
-              
-
-              
                 <div className="flex items-center gap-4">
                   <div>
                     <a
@@ -127,7 +123,7 @@ const Contact = () => {
                       target="blank"
                     >
                       {/* <FaLinkedinIn className="w-10 h-10 icons" /> */}
-                       <img src="./linkedin.png" className="w-10 h-10 icons "/>
+                      <img src="./linkedin.png" className="w-10 h-10 icons " />
                     </a>
                   </div>
                   <div>LinkedIn</div>
@@ -140,7 +136,7 @@ const Contact = () => {
                       target="blank"
                     >
                       {" "}
-                      <img src="./instagram.png" className="w-10 h-10 icons "/>
+                      <img src="./instagram.png" className="w-10 h-10 icons " />
                     </a>
                   </div>
                   <div>Instagram</div>
@@ -174,7 +170,7 @@ const Contact = () => {
                   />
 
                   {contactFormik.touched.name &&
-                  Boolean(contactFormik.errors.name) ? (
+                    Boolean(contactFormik.errors.name) ? (
                     <p className="requiredError">
                       {contactFormik.touched.name && contactFormik.errors.name}
                     </p>
@@ -198,7 +194,7 @@ const Contact = () => {
                   />
 
                   {contactFormik.touched.email &&
-                  Boolean(contactFormik.errors.email) ? (
+                    Boolean(contactFormik.errors.email) ? (
                     <p className="requiredError">
                       {contactFormik.touched.email &&
                         contactFormik.errors.email}
@@ -233,7 +229,7 @@ const Contact = () => {
                   </textarea>
 
                   {contactFormik.touched.message &&
-                  Boolean(contactFormik.errors.message) ? (
+                    Boolean(contactFormik.errors.message) ? (
                     <p className="requiredError">
                       {contactFormik.touched.message &&
                         contactFormik.errors.message}
@@ -255,18 +251,18 @@ const Contact = () => {
               <input type="hidden" name="_next" value="https://appname" />
 
               <div className="bg-[#174978] p-2 rounded text-center text-white text-sm font-medium   cursor-pointer">
-                <button type="submit"  disabled={loading} className="hover:animate-pulse">
+                <button type="submit" disabled={loading} className="hover:animate-pulse">
                   {loading ? (
-          <div className="flex items-center gap-1">
-    <span className="w-2 h-2 bg-black rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-    <span className="w-2 h-2 bg-black rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-    <span className="w-2 h-2 bg-black rounded-full animate-bounce"></span>
-  </div>
-        ) : (
-          "Send message"
-        )}
-                  
-                  </button>  
+                    <div className="flex items-center gap-1">
+                      <span className="w-2 h-2 bg-black rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                      <span className="w-2 h-2 bg-black rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                      <span className="w-2 h-2 bg-black rounded-full animate-bounce"></span>
+                    </div>
+                  ) : (
+                    "Send message"
+                  )}
+
+                </button>
               </div>
             </form>
           </div>
