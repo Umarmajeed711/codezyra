@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import api from "./api";
 const Portfolio = () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -48,6 +49,32 @@ const Portfolio = () => {
       },
     });
   });
+
+
+  const [Portfolios,setPortfolios] = useState([]);
+
+  const getPortfolios = async () => {
+
+    try {
+      
+      let portfolios = await api.get("/portfolio");
+
+      console.log(portfolios);
+      
+    } catch (error) {
+      console.log(error);
+      
+      
+    }
+
+  }
+
+
+  useEffect( () => {
+
+
+
+  })
 
   return (
     <div className="aboutBackground" id="Portfolio">

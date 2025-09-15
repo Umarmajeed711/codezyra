@@ -4,7 +4,7 @@ const Input = ({ type, placeholder, name, value, onChange, styling }) => {
   return (
     <div className={` ${styling ? styling : ""}`}>
       <input
-        className="w-full px-4 py-2 rounded"
+        className="w-full px-4 py-2 rounded text-blue-800 outline-none"
         type={type}
         placeholder={placeholder}
         name={name}

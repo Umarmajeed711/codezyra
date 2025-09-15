@@ -69,12 +69,12 @@ const ContactSection = () => {
     }
   };
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-r from-[#0074b7] via-[#11487c] to-[#0074b7]">
+    <section className="py-10 flex items-center bg-gradient-to-r from-[#0074b7] via-[#11487c] to-[#0074b7]">
       <div className="flex-1 h-full mx-4 md:mx-8 lg:mx-10  p-6 flex flex-col md:flex-row justify-center items-center gap-4 ">
-        <div className="flex-1 rounded-2xl shadow-lg bg-[#2B5B81] self-stretch">
+        <div className="flex-1 rounded-2xl py-4 shadow-lg bg-[#2B5B81] self-stretch">
           <form onSubmit={handleSubmit} className="p-6">
-            <div className="flex flex-col gap-2 ">
-              <h2 className="text-center text-3xl text-white font-semibold">
+            <div className="flex flex-col gap-3 ">
+              <h2 className="text-center text-3xl text-white font-medium">
                 Send us a message
               </h2>
 
@@ -85,44 +85,46 @@ const ContactSection = () => {
               >
                 {error}
               </small>
-              <div className=" flex gap-4">
+              <div className="flex flex-col gap-5">
+                <div className=" flex gap-4">
+                  <Input
+                    type="text"
+                    placeholder={"First name"}
+                    name="firstName"
+                    value={form.firstName}
+                    onChange={changeHandler}
+                    styling={"flex-1"}
+                  />
+                  <Input
+                    type="text"
+                    placeholder={"Last name"}
+                    name="lastName"
+                    value={form.lastName}
+                    onChange={changeHandler}
+                    styling={"flex-1"}
+                  />
+                </div>
                 <Input
-                  type="text"
-                  placeholder={"First name"}
-                  name="firstName"
-                  value={form.firstName}
+                  type="email"
+                  placeholder={"Enter email"}
+                  name="email"
+                  value={form.email}
                   onChange={changeHandler}
-                  styling={"flex-1"}
                 />
-                <Input
-                  type="text"
-                  placeholder={"Last name"}
-                  name="lastName"
-                  value={form.lastName}
-                  onChange={changeHandler}
-                  styling={"flex-1"}
-                />
-              </div>
-              <Input
-                type="email"
-                placeholder={"Enter email"}
-                name="email"
-                value={form.email}
-                onChange={changeHandler}
-              />
-              <div>
-                <textarea
-                  className="w-full h-40 px-4 py-2 rounded"
-                  placeholder="Message"
-                  name="message"
-                  value={form.message}
-                  onChange={changeHandler}
-                  required
-                ></textarea>
+                <div>
+                  <textarea
+                    className="w-full h-40 px-4 py-2 rounded outline-none text-blue-800"
+                    placeholder="Message"
+                    name="message"
+                    value={form.message}
+                    onChange={changeHandler}
+                    required
+                  ></textarea>
+                </div>
               </div>
             </div>
             <button
-              className="w-full py-2 bg-blue-500 flex justify-center text-white hover:bg-blue-600 rounded-lg "
+              className="w-full mt-4 py-2 bg-blue-500 flex justify-center text-white hover:bg-blue-600 rounded-lg "
               type="submit"
             >
               {" "}

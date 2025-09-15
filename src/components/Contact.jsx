@@ -17,14 +17,12 @@ const Contact = () => {
 
   useGSAP(() => {
     gsap.from(".contactForm", {
-      xPercent: -30,
+      xPercent: -20,
       opacity: 0,
       scrollTrigger: {
         trigger: ".contactForm",
-        // markers: true,
-        scrub: 2,
-        start: "top 70%",
-        end: "top 70%",
+        start: "top 50%",
+        end: "top 50%",
         scroll: -1,
       },
     });
@@ -74,7 +72,7 @@ const Contact = () => {
       });
       Toast.fire({
         icon: "success",
-        title: "Thank you for message",
+        title: "Thanks for Contact us",
       });
 
       contactFormik.resetForm();
@@ -88,7 +86,7 @@ const Contact = () => {
     <div className="contact-background theme-background" id="Contact">
       <div className="flex h-full flex-col items-center mx-4 md:mx-8 lg:mx-10 p-4 lg:p-8 ">
         <div className="flex justify-center items-center flex-col">
-          <p className="text-3xl md:text-4xl kurale lg:text-[70px]">Contacts</p>
+          <p className="text-3xl md:text-4xl headings lg:text-[70px]">Contact</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20  my-10 px-2">
@@ -98,8 +96,8 @@ const Contact = () => {
                 Get In Touch
               </p>
               <p className="text-[16px]  poppins text-center md:text-justify">
-                I’m very approachable and would love to speak to you. Feel free
-                to call, send me an email . Follow me in social media or simply
+                We are very approachable and would love to speak to you. Feel free
+                to call us and send an email . Follow us on social media platforms or simply
                 complete the enquiry form.
               </p>
             </div>
@@ -109,31 +107,27 @@ const Contact = () => {
                 <div className="flex items-center gap-4 ">
                   <div>
                     <a
-                      href="https://wa.me/+923303341493?text=Hi%20there%2C%20I%20want%20to%20hire%20you%20for%20a%20project"
+                      href="https://wa.me/+92000111222?text=Hi%20there%2C%20I%20want%20to%20hire%20you%20for%20a%20project"
                       target="_blank"
                     >
-                      <FaWhatsapp className="w-10 h-10 icons " />
+                      {/* <FaWhatsapp className="w-10 h-10 icons " /> */}
+                      <img src="./whatsapp.png" className="w-10 h-10 icons "/>
                     </a>
                   </div>
                   <div>whatsapp</div>
                 </div>
 
-                {/* <div className="flex items-center gap-4">
-                  <div>
-                    <a href=""></a> <GrGithub className="w-10 h-10 icons" />
-                  </div>
-                  <div>Github</div>
-                </div> */}
               
 
               
                 <div className="flex items-center gap-4">
                   <div>
                     <a
-                      href="https://www.linkedin.com/in/saifa-shahnawaz-7a8091318/"
+                      href="https://www.linkedin.com/"
                       target="blank"
                     >
-                      <FaLinkedinIn className="w-10 h-10 icons" />
+                      {/* <FaLinkedinIn className="w-10 h-10 icons" /> */}
+                       <img src="./linkedin.png" className="w-10 h-10 icons "/>
                     </a>
                   </div>
                   <div>LinkedIn</div>
@@ -142,11 +136,11 @@ const Contact = () => {
                 <div className="flex items-center gap-4">
                   <div>
                     <a
-                      href="https://www.instagram.com/saifashahnawaz"
+                      href="https://www.instagram.com"
                       target="blank"
                     >
                       {" "}
-                      <FaInstagram className="w-10 h-10 icons" />
+                      <img src="./instagram.png" className="w-10 h-10 icons "/>
                     </a>
                   </div>
                   <div>Instagram</div>
@@ -158,13 +152,13 @@ const Contact = () => {
           <div className="col-span-1 poppins text-xl  font-light flex justify-center  ">
             {/* Send message form */}
             <form
-              action="https://formsubmit.co/saifashahnawaz@gmail.com"
+              action="https://formsubmit.co/abc@gmail.com"
               method="POST"
               ref={formRef}
               onSubmit={contactFormik.handleSubmit}
-              className=" flex flex-col gap-3 p-5 rounded-2xl form-background w-80  contactForm"
+              className=" flex flex-col gap-2 p-5 rounded-2xl form-background w-80  contactForm"
             >
-              <div>Send me a Message</div>
+              <div className="text-xl ">Contact Us</div>
 
               <div className="flex flex-col gap-1 text-sm">
                 <label htmlFor="name">Name</label>
@@ -218,7 +212,7 @@ const Contact = () => {
               <div className="flex flex-col gap-1 text-sm">
                 <label htmlFor="message">Message</label>
                 <div>
-                  <input
+                  {/* <input
                     type="text"
                     name="message"
                     id="message"
@@ -226,7 +220,17 @@ const Contact = () => {
                     value={contactFormik.values.message}
                     onChange={contactFormik.handleChange}
                     className="inputField "
-                  />
+                  /> */}
+
+                  <textarea name="message"
+                    id="message"
+                    placeholder="Your message"
+                    value={contactFormik.values.message}
+                    onChange={contactFormik.handleChange}
+                    className="inputField " >
+
+
+                  </textarea>
 
                   {contactFormik.touched.message &&
                   Boolean(contactFormik.errors.message) ? (
@@ -248,10 +252,10 @@ const Contact = () => {
               />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="https://ss1-portfolio.netlify.app/" />
+              <input type="hidden" name="_next" value="https://appname" />
 
-              <div className="bg-main-color p-2 rounded text-center text-black text-sm font-medium hover:bg-transparent hover:border cursor-pointer">
-                <button type="submit"  disabled={loading}>
+              <div className="bg-[#174978] p-2 rounded text-center text-white text-sm font-medium   cursor-pointer">
+                <button type="submit"  disabled={loading} className="hover:animate-pulse">
                   {loading ? (
           <div className="flex items-center gap-1">
     <span className="w-2 h-2 bg-black rounded-full animate-bounce [animation-delay:-0.3s]"></span>

@@ -5,7 +5,7 @@ const Button = ({ text, bg }) => {
     <button
       className={`rounded px-6 py-2 ${
         bg ? bg : "bg-blue-600"
-      } my-3 text-white text-[20px] `}
+      } my-3 text-white text-[20px] self-start`}
     >
       {text}
     </button>
