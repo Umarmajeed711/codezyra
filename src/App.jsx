@@ -33,9 +33,10 @@ useEffect(() => {
 
   return (
    <div >
+     
       <Navbar/>
       <MyRoutes/>
-      <Footer/>
+       <Footer/>
     </div>
 
 

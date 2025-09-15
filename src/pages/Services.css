@@ -1,0 +1,27 @@
+
+.service-container{
+    
+    color: white;
+}
+.service-img img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 74px;
+    /* padding-top: 100px; */
+}
+.service-card{
+    padding: 0px 50px 0px 50px;
+}
+.service-head{
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: "Bebas Neue";
+    letter-spacing: 2px;
+}
+.service-para{
+    padding-top:10px ; 
+    text-align: center;
+}
