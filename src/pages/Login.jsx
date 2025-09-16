@@ -67,10 +67,9 @@ const Login = () => {
         });
 
         loginFormik.resetForm();
-        dispatch({ type: "ADMIN_LOGIN", payload: response.data.user });
-
+        dispatch({ type: "ADMIN_LOGIN", payload: response?.data.user });
+        console.log("response" , response);
         navigate("/Dashboard");
-        console.log(response);
       } catch (error) {
         setloading(false);
         setApiError(error?.response.data.message || "Something went wrong");
