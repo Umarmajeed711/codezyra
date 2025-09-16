@@ -8,11 +8,11 @@ const Contact = () => {
      description:
        "Get in touch with our team to discuss how we can help transform your business.We’re here to help.",
      btnText: "Get in touch with us",
-     img: "./contact_us_banner.png",
+     img: "https://www.kindpng.com/picc/m/207-2075249_call-center-customer-service-representative-service-customer-service.png",
    };
   return (
     <>
-      <main>
+      <main className="">
         <HeroSection data={contactData} />
         <ContactSection />
       </main>
